@@ -2,7 +2,7 @@ Source: evolution-data-server
 Section: gnome
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-Original--Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
+XSBC-Original-Maintainer: Debian Evolution Maintainers <pkg-evolution-maintainers@lists.alioth.debian.org>
 Uploaders: Jordi Mallach <jordi@debian.org>,
            Margarita Manterola <debian@marga.com.ar>,
            Loic Minier <lool@dooz.org>,
@@ -14,7 +14,7 @@ Uploaders: Jordi Mallach <jordi@debian.org>,
            David Weinehall <tao@debian.org>,
            Sjoerd Simons <sjoerd@debian.org>,
            Laurent Bigonville <bigon@debian.org>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: https://wiki.gnome.org/Apps/Evolution
 Vcs-Svn: svn://anonscm.debian.org/pkg-evolution/unstable/evolution-data-server
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-evolution/unstable/evolution-data-server
@@ -41,7 +41,7 @@ Build-Depends: debhelper (>= 9),
                libkrb5-dev,
                libldap2-dev,
                liboauth-dev (>= 0.9.4),
-               libphonenumber6-dev [linux-any],
+               libphonenumber6-dev,
                libjson-glib-dev,
                librest-dev (>= 0.7),
                libnss3-dev,
@@ -64,7 +64,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          evolution-data-server-common (= ${source:Version}),
-         libcamel-1.2-49 (= ${binary:Version})
+         libcamel-1.2-49 (= ${binary:Version}),
+         gnome-keyring
 Suggests: evolution,
           evolution-data-server-dbg (= ${binary:Version})
 Breaks: libecal1.2-7 (<< 2.32),
@@ -145,8 +146,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          evolution-data-server-common (>= ${gnome:Version})
-Conflicts: libedataserver-1.2-17
-Replaces : libedataserver-1.2-17
 Description: Utility library for evolution data servers
  The data server, called "Evolution Data Server" is responsible for managing
  calendar and addressbook information.
@@ -160,12 +159,11 @@ Depends: libedataserver-1.2-18 (= ${binary:Version}),
          gir1.2-edataserver-1.2 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
-         libedata-book1.2-dev,
-         libcamel1.2-dev (= ${binary:Version}),
-         libxml2-dev,
          libglib2.0-dev,
-         libsoup2.4-dev,
-         libsecret-1-dev
+         libcamel1.2-dev (= ${binary:Version}),
+         libsecret-1-dev,
+         libxml2-dev,
+         libsoup2.4-dev
 Description: Utility library for evolution data servers (development files)
  The data server, called "Evolution Data Server" is responsible for managing
  calendar and addressbook information.
@@ -207,7 +205,6 @@ Depends: libcamel-1.2-49 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
          libglib2.0-dev,
-         libedataserver1.2-dev (= ${binary:Version}),
          libsqlite3-dev (>= 3.5),
          libnss3-dev,
          libnspr4-dev
@@ -241,6 +238,7 @@ Depends: libebook-1.2-14 (= ${binary:Version}),
          ${shlibs:Depends},
          libedataserver1.2-dev (= ${binary:Version}),
          libebook-contacts1.2-dev (= ${binary:Version}),
+         libedata-book1.2-dev (= ${binary:Version}),
          libcamel1.2-dev (= ${binary:Version}),
          libglib2.0-dev
 Description: Client library for evolution address books (development files)
@@ -281,9 +279,8 @@ Architecture: any
 Depends: libedata-book-1.2-20 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
-         libedataserver1.2-dev (= ${binary:Version}),
          libebackend1.2-dev (= ${binary:Version}),
-         libebook1.2-dev (= ${binary:Version}),
+         libebook-contacts1.2-dev (= ${binary:Version}),
          libglib2.0-dev
 Description: Backend library for evolution address books (development files)
  Evolution is the integrated mail, calendar, task and address book
@@ -375,7 +372,6 @@ Depends: libedata-cal-1.2-23 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
          libical-dev (>= 0.43),
-         libedataserver1.2-dev (= ${binary:Version}),
          libecal1.2-dev (= ${binary:Version}),
          libebackend1.2-dev (= ${binary:Version}),
          libglib2.0-dev
@@ -402,6 +398,7 @@ Section: libdevel
 Architecture: any
 Depends: libebackend-1.2-7 (= ${binary:Version}),
          ${misc:Depends},
+         libedataserver1.2-dev (= ${binary:Version}),
          libglib2.0-dev
 Description: Utility library for evolution data servers (development files)
  This package contains header files and static library for libebackend.
