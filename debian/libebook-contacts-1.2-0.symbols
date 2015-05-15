@@ -54,6 +54,7 @@ libebook-contacts-1.2.so.0 libebook-contacts-1.2-0 #MINVER#
  e_contact_geo_new@Base 3.7.90
  e_contact_get@Base 3.7.90
  e_contact_get_attributes@Base 3.7.90
+ e_contact_get_attributes_set@Base 3.13.5
  e_contact_get_const@Base 3.7.90
  e_contact_get_type@Base 3.7.90
  e_contact_inline_local_photos@Base 3.7.90
@@ -160,4 +161,3 @@ libebook-contacts-1.2.so.0 libebook-contacts-1.2-0 #MINVER#
  e_vcard_remove_attributes@Base 3.7.90
  e_vcard_to_string@Base 3.7.90
  e_vcard_unescape_string@Base 3.7.90
-
