@@ -1,3 +1,9 @@
+evolution-data-server (3.13.90-0blankon2) tambora; urgency=medium
+
+  * Bump version depends libcamel-1-2-50 to libcamel-1-2-51 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 12:05:39 +0700
+
 evolution-data-server (3.13.90-0blankon1) tambora; urgency=medium
 
   [ Laurent Bigonville ]
