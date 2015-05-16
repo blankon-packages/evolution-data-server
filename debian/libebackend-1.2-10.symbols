@@ -1,4 +1,4 @@
-libebackend-1.2.so.10 libebackend-1.2-9 #MINVER#
+libebackend-1.2.so.10 libebackend-1.2-10 #MINVER#
  e_authentication_session_result_get_type@Base 3.13.90-0blankon1
  e_backend_credentials_required@Base 3.13.90-0blankon1
  e_backend_credentials_required_finish@Base 3.13.90-0blankon1

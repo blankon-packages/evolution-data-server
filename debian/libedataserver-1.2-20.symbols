@@ -1,4 +1,4 @@
-libedataserver-1.2.so.20 libedataserver-1.2-19 #MINVER#
+libedataserver-1.2.so.20 libedataserver-1.2-20 #MINVER#
  _ZN6icu_5214StringByteSinkISsE6AppendEPKci@Base 3.13.90
  _ZN6icu_5214StringByteSinkISsED0Ev@Base 3.13.90
  _ZN6icu_5214StringByteSinkISsED1Ev@Base 3.13.90
@@ -771,7 +771,7 @@ libedataserver-1.2.so.20 libedataserver-1.2-19 #MINVER#
  generators_count@Base 3.13.90
  operators_count@Base 3.13.90
  time_functions@Base 3.13.90
-libedbus-private.so libedataserver-1.2-19 #MINVER#
+libedbus-private.so libedataserver-1.2-20 #MINVER#
  e_dbus_address_book_call_close@Base 3.13.90-0blankon1
  e_dbus_address_book_call_close_finish@Base 3.13.90-0blankon1
  e_dbus_address_book_call_close_sync@Base 3.13.90-0blankon1

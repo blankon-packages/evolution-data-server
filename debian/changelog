@@ -1,3 +1,20 @@
+evolution-data-server (3.13.90-0blankon3) tambora; urgency=medium
+
+  * debian/control:
+    - (re-)add libedataserverui as libedataserverui-1.2-1
+  * debian/control, debian/lib*.{install,symbols}:
+    - libecal-1.2-17 -> libecal-1.2-18
+    - libedata-cal-1.2-26 -> libedata-cal-1.2-27
+    - libcamel-1.2-51 -> libcamel-1.2-52
+    - libebook-1.2-15 -> libebook-1.2-16
+    - libebook-contacts-1.2-0 -> libebook-contacts-1.2-1
+    - libedata-book-1.2-24 -> libedata-book-1.2-25
+    - libedataserver-1.2-19 -> libedataserver-1.2-20
+    - libebackend-1.2-9 -> libebackend-1.2-10
+    - bump libgtk-3-dev to >= 3.8 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 13:54:19 +0700
+
 evolution-data-server (3.13.90-0blankon2) tambora; urgency=medium
 
   * Bump version depends libcamel-1-2-50 to libcamel-1-2-51 

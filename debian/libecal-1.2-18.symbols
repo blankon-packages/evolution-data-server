@@ -1,4 +1,4 @@
-libecal-1.2.so.18 libecal-1.2-17 #MINVER#
+libecal-1.2.so.18 libecal-1.2-18 #MINVER#
  _e_cal_view_new@Base 3.13.90-0blankon1
  cal_mode_enum_get_type@Base 3.13.90-0blankon1
  cal_obj_instance_list_free@Base 3.13.90-0blankon1

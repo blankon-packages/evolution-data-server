@@ -1,4 +1,4 @@
-libedata-cal-1.2.so.27 libedata-cal-1.2-26 #MINVER#
+libedata-cal-1.2.so.27 libedata-cal-1.2-27 #MINVER#
  e_cal_backend_add_timezone@Base 3.13.90-0blankon1
  e_cal_backend_add_timezone_finish@Base 3.13.90-0blankon1
  e_cal_backend_add_timezone_sync@Base 3.13.90-0blankon1

@@ -1,4 +1,4 @@
-libebook-1.2.so.16 libebook-1.2-15 #MINVER#
+libebook-1.2.so.16 libebook-1.2-16 #MINVER#
  _e_book_view_new@Base 3.13.90-0blankon1
  book_client_delete_direct_cursor@Base 3.13.90-0blankon1
  e_book_add_contact@Base 3.13.90-0blankon1
