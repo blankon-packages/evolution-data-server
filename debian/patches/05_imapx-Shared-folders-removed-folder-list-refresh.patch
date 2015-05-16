@@ -1,0 +1,77 @@
+From c64b95c59e5774a6eb335805122fae5cd54f0bbf Mon Sep 17 00:00:00 2001
+From: Milan Crha <mcrha@redhat.com>
+Date: Wed, 11 Feb 2015 18:13:37 +0100
+Subject: Bug 743533 - [IMAPx] Shared folders removed on folder list refresh
+
+
+Index: evolution-data-server-3.12.9~git20141128.5242b0/camel/providers/imapx/camel-imapx-store.c
+===================================================================
+--- evolution-data-server-3.12.9~git20141128.5242b0.orig/camel/providers/imapx/camel-imapx-store.c
++++ evolution-data-server-3.12.9~git20141128.5242b0/camel/providers/imapx/camel-imapx-store.c
+@@ -1425,8 +1425,6 @@ sync_folders (CamelIMAPXStore *imapx_sto
+ {
+ 	CamelIMAPXServer *server;
+ 	GHashTable *folder_info_results;
+-	GPtrArray *array;
+-	guint ii;
+ 	gboolean success;
+ 
+ 	server = camel_imapx_store_ref_server (imapx_store, NULL, FALSE, cancellable, error);
+@@ -1486,48 +1484,6 @@ sync_folders (CamelIMAPXStore *imapx_sto
+ 		g_mutex_unlock (&imapx_store->priv->mailboxes_lock);
+ 	}
+ 
+-	array = camel_store_summary_array (imapx_store->summary);
+-
+-	for (ii = 0; ii < array->len; ii++) {
+-		CamelStoreInfo *si;
+-		CamelFolderInfo *fi;
+-		const gchar *mailbox_name;
+-		const gchar *si_path;
+-		gboolean pattern_match;
+-
+-		si = g_ptr_array_index (array, ii);
+-		si_path = camel_store_info_path (imapx_store->summary, si);
+-
+-		mailbox_name = ((CamelIMAPXStoreInfo *) si)->mailbox_name;
+-		if (mailbox_name == NULL || *mailbox_name == '\0')
+-			continue;
+-
+-		pattern_match =
+-			(root_folder_path == NULL) ||
+-			(*root_folder_path == '\0') ||
+-			(g_str_has_prefix (si_path, root_folder_path));
+-		if (!pattern_match)
+-			continue;
+-
+-		fi = g_hash_table_lookup (folder_info_results, mailbox_name);
+-
+-		if (fi == NULL) {
+-			gchar *dup_folder_path = g_strdup (si_path);
+-
+-			if (dup_folder_path != NULL) {
+-				/* Do not unsubscribe from it, it influences UI for non-subscribable folders */
+-				imapx_delete_folder_from_cache (
+-					imapx_store, dup_folder_path);
+-				g_free (dup_folder_path);
+-			} else {
+-				camel_store_summary_remove (
+-					imapx_store->summary, si);
+-			}
+-		}
+-	}
+-
+-	camel_store_summary_array_free (imapx_store->summary, array);
+-
+ exit:
+ 	g_hash_table_destroy (folder_info_results);
+ 
+@@ -1771,7 +1727,7 @@ imapx_store_get_folder_info_sync (CamelS
+ 	}
+ 
+ 	/* XXX I don't know why the SUBSCRIBED flag matters here. */
+-	if (!initial_setup && flags & CAMEL_STORE_FOLDER_INFO_SUBSCRIBED) {
++	if (!initial_setup && (flags & CAMEL_STORE_FOLDER_INFO_SUBSCRIBED) != 0) {
+ 		time_t time_since_last_refresh;
+ 
+ 		time_since_last_refresh =
