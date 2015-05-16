@@ -154,7 +154,7 @@ Description: Utility library for evolution data servers
 Package: libedataserver1.2-dev
 Section: libdevel
 Architecture: any
-Depends: libedataserver-1.2-19 (= ${binary:Version}),
+Depends: libedataserver-1.2-20 (= ${binary:Version}),
          gir1.2-edataserver-1.2 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends},
@@ -233,7 +233,7 @@ Description: Client library for evolution address books
 Package: libebook1.2-dev
 Section: libdevel
 Architecture: any
-Depends: libebook-1.2-15 (= ${binary:Version}),
+Depends: libebook-1.2-16 (= ${binary:Version}),
          gir1.2-ebook-1.2 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
@@ -307,7 +307,7 @@ Description: Backend library for evolution address books
 Package: libedata-book1.2-dev
 Section: libdevel
 Architecture: any
-Depends: libedata-book-1.2-24 (= ${binary:Version}),
+Depends: libedata-book-1.2-25 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
          libedataserver1.2-dev (= ${binary:Version}),
