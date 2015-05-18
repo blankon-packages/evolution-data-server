@@ -1,0 +1,11 @@
+#! /bin/sh
+set -e
+
+case "$1" in
+  configure)
+  if [ -f /usr/lib/libecal-1.2.so.16.0.0 ]; then
+    dpkg-divert --add --local --divert /usr/lib/libecal-1.2.so.16.0.0.divert --rename /usr/lib/libecal-1.2.so.16.0.0
+  fi
+esac
+
+exit 0

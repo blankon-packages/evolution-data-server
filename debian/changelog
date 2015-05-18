@@ -1,3 +1,19 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon6) tambora; urgency=medium
+
+  * Make library divert
+    - libecal-1.2-16.postinst
+    - libecal-1.2-16.postrm
+    - libedata-book-1.2-20.postinst
+    - libedata-book-1.2-20.postrm
+    - libedata-cal-1.2-23.postinst
+    - libedata-cal-1.2-23.postrm
+    - libebackend-1.2-7.postinst
+    - libebackend-1.2-7.postrm
+    - libedataserver-1.2-18.postinst
+    - libedataserver-1.2-18.postrm
+
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 18 May 2015 23:09:06 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon5) tambora; urgency=medium
 
   * Rebuild 

@@ -1,0 +1,11 @@
+#! /bin/sh
+set -e
+
+case "$1" in
+  configure)
+  if [ -f /usr/lib/libedataserver-1.2.so.18.0.0 ]; then
+    dpkg-divert --add --local --divert /usr/lib/libedataserver-1.2.so.18.0.0.divert --rename /usr/lib/libedataserver-1.2.so.18.0.0
+  fi
+esac
+
+exit 0
