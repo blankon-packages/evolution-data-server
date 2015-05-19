@@ -1,3 +1,10 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon9) tambora; urgency=medium
+
+  * In script preinst change configure to upgrade, this script only running if
+    package upgrade
+
+ -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 21:10:56 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon8) tambora; urgency=medium
 
   * Rename:

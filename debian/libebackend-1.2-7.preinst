@@ -2,7 +2,7 @@
 set -e
 
 case "$1" in
-  configure)
+  upgrade)
   if [ -f /usr/lib/libebackend-1.2.so.7 ]; then
     dpkg-divert --add --local --divert /usr/lib/libebackend-1.2.so.7.divert --rename /usr/lib/libebackend-1.2.so.7
   fi

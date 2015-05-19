@@ -2,7 +2,7 @@
 set -e
 
 case "$1" in
-  configure)
+  upgrade)
   if [ -f /usr/lib/libedataserver-1.2.so.18 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedataserver-1.2.so.18.divert --rename /usr/lib/libedataserver-1.2.so.18
   fi

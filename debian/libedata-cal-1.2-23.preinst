@@ -2,7 +2,7 @@
 set -e
 
 case "$1" in
-  configure)
+  upgrade)
   if [ -f /usr/lib/libedata-cal-1.2.so.23 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedata-cal-1.2.so.23.divert --rename /usr/lib/libedata-cal-1.2.so.23
   fi

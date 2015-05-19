@@ -2,7 +2,7 @@
 set -e
 
 case "$1" in
-  configure)
+  upgrade)
   if [ -f /usr/lib/libedata-book-1.2.so.20 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedata-book-1.2.so.20.divert --rename /usr/lib/libedata-book-1.2.so.20
   fi
