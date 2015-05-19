@@ -1,3 +1,9 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon10) tambora; urgency=medium
+
+  * fix script pre install 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 21:49:32 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon9) tambora; urgency=medium
 
   * In script preinst change configure to upgrade, this script only running if
