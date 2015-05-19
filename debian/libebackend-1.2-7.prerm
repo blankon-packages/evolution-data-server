@@ -1,11 +1,11 @@
-#! /bin/sh
-set -e
+pkg=libebackend-1.2-7
 
-if [ -f /usr/lib/libecal-1.2.so.7.divert ]; then
-  rm -f /usr/lib/libecal-1.2.so.7
-  dpkg-divert --local --remove --rename /usr/lib/libecal-1.2.so.7
+if [ upgrade != "$1" ] || dpkg --compare-versions "$2" lt 3.12.9~git20141128.5242b0-2+deb8u2blankon11; then
+    dpkg-divert --divert /usr/lib/libebackend-1.2.so.7.divert --package "$pkg" --rename --remove /usr/lib/libebackend-1.2.so.7
 fi
-if [ -f /usr/lib/libecal-1.2.so.7.0.0.divert ]; then
-  rm -f /usr/lib/libecal-1.2.so.7.0.0
-  dpkg-divert --local --remove --rename /usr/lib/libecal-1.2.so.7.0.0
+if [ upgrade != "$1" ] || dpkg --compare-versions "$2" lt 3.12.9~git20141128.5242b0-2+deb8u2blankon11; then
+    dpkg-divert  --divert /usr/lib/libebackend-1.2.so.7.0.0.divert --package "$pkg" --rename --remove /usr/lib/libebackend-1.2.so.7.18.0.0
 fi
+
+#DEBHELPER#
+

@@ -1,3 +1,10 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon11) tambora; urgency=medium
+
+  * Fix script preinst/prerm
+    - Added package name/version to diversions
+
+ -- Mahyuddin <yudi.al@gmail.com>  Wed, 20 May 2015 02:47:57 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon10) tambora; urgency=medium
 
   * fix script pre install 

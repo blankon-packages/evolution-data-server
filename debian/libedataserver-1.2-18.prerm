@@ -1,11 +1,10 @@
-#! /bin/sh
-set -e
+pkg=libedataserver-1.2-18
 
-if [ -f /usr/lib/libedataserver-1.2.so.18.divert ]; then
-  rm -f /usr/lib/libedataserver-1.2.so.18
-  dpkg-divert --local --remove --rename /usr/lib/libedataserver-1.2.so.18
+if [ upgrade != "$1" ] || dpkg --compare-versions "$2" lt 3.12.9~git20141128.5242b0-2+deb8u2blankon11; then
+    dpkg-divert --divert /usr/lib/libedataserver-1.2.so.18.divert --package "$pkg" --rename --remove /usr/lib/libedataserver-1.2.so.18
 fi
-if [ -f /usr/lib/libedataserver-1.2.so.18.0.0.divert ]; then
-  rm -f /usr/lib/libedataserver-1.2.so.18.0.0
-  dpkg-divert --local --remove --rename /usr/lib/libedataserver-1.2.so.18.0.0
+if [ upgrade != "$1" ] || dpkg --compare-versions "$2" lt 3.12.9~git20141128.5242b0-2+deb8u2blankon11; then
+    dpkg-divert  --divert /usr/lib/libedataserver-1.2.so.18.0.0.divert --package "$pkg" --rename --remove /usr/lib/libedataserver-1.2.so.18.0.0
 fi
+
+#DEBHELPER#
