@@ -5,11 +5,9 @@ case "$1" in
   configure)
   if [ -f /usr/lib/libedata-cal-1.2.so.23 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedata-cal-1.2.so.23.divert --rename /usr/lib/libedata-cal-1.2.so.23
-    cp -a /tmp/libedata-cal-1.2.so.23 /usr/libedata-cal-1.2.so.23
   fi
   if [ -f /usr/lib/libedata-cal-1.2.so.23.0.0 ]; then
-    dpkg-divert --add --local --divert /usr/lib/libedata-cal-1.2.so.23.0.0.divert --rename /usr/lib/libedata-cal-1.2.so.23.0.0
-    cp -a /tmp/libedata-cal-1.2.so.23.0.0 /usr/libedata-cal-1.2.so.23.0.0
+    dpkg-divert --add --local --divert /usr/lib/libedata-cal-1.2.so.23.0.0.divert --rename /usr/lib/libedata-cal-1.2.so.23.0.0 
   fi
 esac
 

@@ -5,11 +5,9 @@ case "$1" in
   configure)
   if [ -f /usr/lib/libedataserver-1.2.so.18 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedataserver-1.2.so.18.divert --rename /usr/lib/libedataserver-1.2.so.18
-    cp -a /tmp/libedataserver-1.2.so.18 /usr/lib/libedataserver-1.2.so.18
   fi
   if [ -f /usr/lib/libedataserver-1.2.so.18.0.0 ]; then
     dpkg-divert --add --local --divert /usr/lib/libedataserver-1.2.so.18.0.0.divert --rename /usr/lib/libedataserver-1.2.so.18.0.0
-    cp -a /tmp/libedataserver-1.2.so.18.0.0 /usr/lib/libedataserver-1.2.so.18.0.0
   fi
 esac
 

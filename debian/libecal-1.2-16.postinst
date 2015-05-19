@@ -5,11 +5,9 @@ case "$1" in
   configure)
     if [ -f /usr/lib/libecal-1.2.so.16 ]; then
     dpkg-divert --add --local --divert /usr/lib/libecal-1.2.so.16.divert --rename /usr/lib/libecal-1.2.so.16
-    cp -a /tmp/libecal-1.2.so.16 /usr/lib/libecal-1.2.so.16
   fi
   if [ -f /usr/lib/libecal-1.2.so.16.0.0 ]; then
     dpkg-divert --add --local --divert /usr/lib/libecal-1.2.so.16.0.0.divert --rename /usr/lib/libecal-1.2.so.16.0.0
-    cp -a /tmp/libecal-1.2.so.16.0.0 /usr/lib/libecal-1.2.so.16.0.0
   fi
 esac
 
