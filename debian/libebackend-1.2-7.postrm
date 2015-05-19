@@ -1,7 +1,11 @@
 #! /bin/sh
 set -e
 
-if [ -f /usr/lib/libecal-1.2.so.16.0.0.divert ]; then
-  rm -f /usr/lib/libecal-1.2.so.16.0.0
-  dpkg-divert --local --remove --rename /usr/lib/libecal-1.2.so.16.0.0
+if [ -f /usr/lib/libecal-1.2.so.7.divert ]; then
+  rm -f /usr/lib/libecal-1.2.so.7
+  dpkg-divert --local --remove --rename /usr/lib/libecal-1.2.so.7
+fi
+if [ -f /usr/lib/libecal-1.2.so.7.0.0.divert ]; then
+  rm -f /usr/lib/libecal-1.2.so.7.0.0
+  dpkg-divert --local --remove --rename /usr/lib/libecal-1.2.so.7.0.0
 fi

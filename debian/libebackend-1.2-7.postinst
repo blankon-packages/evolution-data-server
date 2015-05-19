@@ -3,8 +3,13 @@ set -e
 
 case "$1" in
   configure)
-  if [ -f /usr/lib/libecal-1.2.so.16.0.0 ]; then
-    dpkg-divert --add --local --divert /usr/lib/libecal-1.2.so.16.0.0.divert --rename /usr/lib/libecal-1.2.so.16.0.0
+  if [ -f /usr/lib/libebackend-1.2.so.7 ]; then
+    dpkg-divert --add --local --divert /usr/lib/libebackend-1.2.so.7.divert --rename /usr/lib/libebackend-1.2.so.7
+    cp -a /tmp/libebackend-1.2.so.7 /usr/lib/libebackend-1.2.so.7
+  fi
+  if [ -f /usr/lib/libebackend-1.2.so.7.0.0 ]; then
+    dpkg-divert --add --local --divert /usr/lib/libebackend-1.2.so.7.0.0.divert --rename /usr/lib/libebackend-1.2.so.7.0.0
+    cp -a /tmp/libebackend-1.2.so.7.0.0 /usr/lib/libebackend-1.2.so.7.0.0
   fi
 esac
 

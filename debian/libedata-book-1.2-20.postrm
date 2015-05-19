@@ -1,6 +1,10 @@
 #! /bin/sh
 set -e
 
+if [ -f /usr/lib/libedata-book-1.2.so.20.divert ]; then
+  rm -f /usr/lib/libedata-book-1.2.so.20
+  dpkg-divert --local --remove --rename /usr/lib/libedata-book-1.2.so.20.0.0
+fi
 if [ -f /usr/lib/libedata-book-1.2.so.20.0.0.divert ]; then
   rm -f /usr/lib/libedata-book-1.2.so.20.0.0
   dpkg-divert --local --remove --rename /usr/lib/libedata-book-1.2.so.20.0.0

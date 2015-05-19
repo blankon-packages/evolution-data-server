@@ -1,6 +1,10 @@
 #! /bin/sh
 set -e
 
+if [ -f /usr/lib/libedata-cal-1.2.so.23.divert ]; then
+  rm -f /usr/lib/libedata-cal-1.2.so.23
+  dpkg-divert --local --remove --rename /usr/lib/libedata-cal-1.2.so.23
+fi
 if [ -f /usr/lib/libedata-cal-1.2.so.23.0.0.divert ]; then
   rm -f /usr/lib/libedata-cal-1.2.so.23.0.0
   dpkg-divert --local --remove --rename /usr/lib/libedata-cal-1.2.so.23.0.0

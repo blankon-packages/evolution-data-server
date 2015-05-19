@@ -1,3 +1,10 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon7) tambora; urgency=medium
+
+  * Make library install to tmp
+  * Add script divert
+
+ -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 13:54:15 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon6) tambora; urgency=medium
 
   * Make library divert

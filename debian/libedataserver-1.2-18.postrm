@@ -1,6 +1,10 @@
 #! /bin/sh
 set -e
 
+if [ -f /usr/lib/libedataserver-1.2.so.18.divert ]; then
+  rm -f /usr/lib/libedataserver-1.2.so.18
+  dpkg-divert --local --remove --rename /usr/lib/libedataserver-1.2.so.18
+fi
 if [ -f /usr/lib/libedataserver-1.2.so.18.0.0.divert ]; then
   rm -f /usr/lib/libedataserver-1.2.so.18.0.0
   dpkg-divert --local --remove --rename /usr/lib/libedataserver-1.2.so.18.0.0
