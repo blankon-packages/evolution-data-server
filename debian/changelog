@@ -1,3 +1,9 @@
+evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon12) tambora; urgency=medium
+
+  * Fix typo libedata-cal 
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sun, 24 May 2015 13:15:36 +0700
+
 evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon11) tambora; urgency=medium
 
   * Fix script preinst/prerm
