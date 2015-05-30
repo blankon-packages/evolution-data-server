@@ -1,4 +1,1 @@
 02_Only-export-symbols-starting-with-e.patch
-03_Use-after-free-gpg-verif.patch
-04_sqlite-Track-pending-sync-requests.patch
-05_imapx-Shared-folders-removed-folder-list-refresh.patch

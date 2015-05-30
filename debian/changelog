@@ -1,105 +1,17 @@
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon12) tambora; urgency=medium
+evolution-data-server (3.12.11-1blankon1) tambora; urgency=medium
 
-  * Fix typo libedata-cal 
+  * Re-added lib*.postinst/postrm 
 
- -- Mahyuddin <yudi.al@gmail.com>  Sun, 24 May 2015 13:15:36 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 30 May 2015 20:47:48 +0700
 
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon11) tambora; urgency=medium
+evolution-data-server (3.12.11-1) unstable; urgency=medium
 
-  * Fix script preinst/prerm
-    - Added package name/version to diversions
+  * Replace hardcoded list of libphonenumber architectures with just
+    [linux-any], so arm64 can also get this support.
+  * New upstream bugfix release.
+  * Bump valac build-dependency.
 
- -- Mahyuddin <yudi.al@gmail.com>  Wed, 20 May 2015 02:47:57 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon10) tambora; urgency=medium
-
-  * fix script pre install 
-
- -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 21:49:32 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon9) tambora; urgency=medium
-
-  * In script preinst change configure to upgrade, this script only running if
-    package upgrade
-
- -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 21:10:56 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon8) tambora; urgency=medium
-
-  * Rename:
-    - *.postinst to *.preinst
-    - *.postrm to *.prerm
-
- -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 20:16:36 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon7) tambora; urgency=medium
-
-  * Make library install to tmp
-  * Add script divert
-
- -- Mahyuddin <yudi.al@gmail.com>  Tue, 19 May 2015 13:54:15 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon6) tambora; urgency=medium
-
-  * Make library divert
-    - libecal-1.2-16.postinst
-    - libecal-1.2-16.postrm
-    - libedata-book-1.2-20.postinst
-    - libedata-book-1.2-20.postrm
-    - libedata-cal-1.2-23.postinst
-    - libedata-cal-1.2-23.postrm
-    - libebackend-1.2-7.postinst
-    - libebackend-1.2-7.postrm
-    - libedataserver-1.2-18.postinst
-    - libedataserver-1.2-18.postrm
-
- -- Mahyuddin <yudi.al@gmail.com>  Mon, 18 May 2015 23:09:06 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon5) tambora; urgency=medium
-
-  * Rebuild 
-
- -- Mahyuddin <yudi.al@gmail.com>  Sun, 17 May 2015 01:29:20 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon4) tambora; urgency=medium
-
-  * Rename conflicts to breaks 
-
- -- Mahyuddin <yudi.al@gmail.com>  Thu, 14 May 2015 17:20:19 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon3) tambora; urgency=medium
-
-  * Change conflicts version 
-
- -- Mahyuddin <yudi.al@gmail.com>  Thu, 14 May 2015 16:18:08 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon2) tambora; urgency=medium
-
-  * Debian/control: added section Conflicts and Replaces 
-
- -- Mahyuddin <yudi.al@gmail.com>  Thu, 14 May 2015 14:42:41 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2blankon1) tambora; urgency=medium
-
-  * Rebuild 
-
- -- Mahyuddin <yudi.al@gmail.com>  Sat, 28 Mar 2015 20:16:29 +0700
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u2) unstable; urgency=medium
-
-  * d/p/05_imapx-Shared-folders-removed-folder-list-refresh.patch: Fix shared
-    IMAP folders disappearing in some situations.
-
- -- Jordi Mallach <jordi@debian.org>  Thu, 12 Feb 2015 10:59:19 +0100
-
-evolution-data-server (3.12.9~git20141128.5242b0-2+deb8u1) unstable; urgency=medium
-
-  * d/p/03_Use-after-free-gpg-verif.patch: Fix crash during GPG signature
-    verification (Closes: #772802)
-  * d/p/04_sqlite-Track-pending-sync-requests.patch: Properly track pending
-    sync requests before closing the sqlite files (Closes: #775701)
-
- -- Laurent Bigonville <bigon@debian.org>  Fri, 30 Jan 2015 00:57:19 +0100
+ -- Josselin Mouette <joss@debian.org>  Fri, 29 May 2015 17:25:33 +0200
 
 evolution-data-server (3.12.9~git20141128.5242b0-2) unstable; urgency=medium
 
@@ -115,6 +27,19 @@ evolution-data-server (3.12.9~git20141128.5242b0-1) unstable; urgency=medium
     and translations.
 
  -- Josselin Mouette <joss@debian.org>  Sun, 30 Nov 2014 09:55:18 +0100
+
+evolution-data-server (3.12.7.1-2) unstable; urgency=medium
+
+  * Replace hardcoded list of libphonenumber architectures with just
+    [!kfreebsd-any !hurd-any], so arm64 can also get this support.
+  * Add sqlite3_xfetch_crash.patch: Add upstream fix for crashes with
+    new sqlite3 (closes: #765812).
+  * Add imapx_no_connect_when_offline.patch: avoid server connections while
+    in offline mode.
+  * Add imapx_reconnect_after_socket_io_timeout.patch: Fix connection
+    problems after network state changes.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 06 Nov 2014 21:10:18 +0100
 
 evolution-data-server (3.12.7.1-1) unstable; urgency=medium
 
